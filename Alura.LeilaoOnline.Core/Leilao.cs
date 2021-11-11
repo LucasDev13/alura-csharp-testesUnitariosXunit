@@ -28,7 +28,9 @@ namespace Alura.LeilaoOnline.Core
 
         public void TerminaPregao()
         {
-            Ganhador = Lances.Last();
+            Ganhador = Lances
+                .OrderBy(l => l.Valor)
+                .Last();
         }
     }
 }
