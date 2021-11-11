@@ -7,6 +7,7 @@ namespace Alura.LeilaoOnline.ConsoleApp
     {
         static void Main()
         {
+            //Arrange - 
             var leilao = new Leilao("Van Gogh");
             var fulano = new Interessada("Fulano", leilao);
             var maria = new Interessada("Maria", leilao);
@@ -16,9 +17,20 @@ namespace Alura.LeilaoOnline.ConsoleApp
             leilao.RecebeLance(fulano, 1000);
             leilao.RecebeLance(maria, 990);
 
+            //Act - método sob teste.
             leilao.TerminaPregao();
 
-            Console.WriteLine(leilao.Ganhador.Valor);
+            //Assert
+            var valorEsperado = 1000;
+            var valorObtido = leilao.Ganhador.Valor;
+            if (valorEsperado == valorObtido)
+            {
+                Console.WriteLine("TESTE OK");
+            }
+            else
+            {
+                Console.WriteLine("TESTE FALHOU"); 
+            }
         }
     }
 }
