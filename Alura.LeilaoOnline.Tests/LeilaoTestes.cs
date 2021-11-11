@@ -28,6 +28,8 @@ namespace Alura.LeilaoOnline.Tests
             var valorEsperado = 1400;
             var clienteEsperado = beltrano;
             var valorObtido = leilao.Ganhador.Valor;
+            //Posso ter mais de um Assert
+            //O método Equal tem mais de uma sobrecarga.
             Assert.Equal(valorEsperado, valorObtido);
             Assert.Equal(beltrano, leilao.Ganhador.Cliente);
         }
@@ -94,6 +96,20 @@ namespace Alura.LeilaoOnline.Tests
             var valorObtido = leilao.Ganhador.Valor;
             Assert.Equal(valorEsperado, valorObtido);
 
+        }
+
+        [Fact]
+        public void LeilaoSemLances()
+        {
+            //Arrange
+            var leilao = new Leilao("Van Gogh");
+            //Act
+            leilao.TerminaPregao();
+            //Assert
+            var valorEsperado = 0;
+            var valorObtido = leilao.Ganhador.Valor;
+
+            Assert.Equal(valorEsperado, valorObtido);
         }
     }
 }
