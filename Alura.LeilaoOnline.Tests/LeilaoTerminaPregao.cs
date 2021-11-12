@@ -3,7 +3,7 @@ using Alura.LeilaoOnline.Core;
 
 namespace Alura.LeilaoOnline.Tests
 {
-    public class LeilaoTestes
+    public class LeilaoTerminaPregao
     {
         
         //[Fact]//Fact = Fato. Diz para o xUnit que são métodos de teste
@@ -13,7 +13,7 @@ namespace Alura.LeilaoOnline.Tests
         [InlineData(1000,new double[] { 800, 900, 1000, 990 })]
         [InlineData(800, new double[] {800})]
         //os argumentos precisam ser injetados no método para não dar erros no InlineData
-        public void LeilaoComVariosLances(double valorEsperado, double[] ofertas)
+        public void RetornaMaiorValorDadoLeilaoComPeloMenosUmLance(double valorEsperado, double[] ofertas)
         {
             //Arrange - Cenário
             var leilao = new Leilao("Van Gogh");
@@ -33,7 +33,7 @@ namespace Alura.LeilaoOnline.Tests
         }
 
         [Fact]
-        public void LeilaoSemLances()
+        public void RetornaZeroDadoLeilaoSemLances()
         {
             //Arrange
             var leilao = new Leilao("Van Gogh");
