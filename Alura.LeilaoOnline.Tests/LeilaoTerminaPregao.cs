@@ -11,10 +11,10 @@ namespace Alura.LeilaoOnline.Tests
             double valorDestino, double valorEsperado, double[] ofertas)
         {
             //Arrange
-            var leilao = new Leilao("Van Gogh");
+            var leilao = new Leilao("Van Gogh", valorDestino);
             var fulano = new Interessada("Fulano", leilao);
             var maria = new Interessada("Maria", leilao);
-
+            leilao.IniciaPregao();
             for (int i = 0; i < ofertas.Length; i++)
             {
                 if ((i % 2 == 0))
