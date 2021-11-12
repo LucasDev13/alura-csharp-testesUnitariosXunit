@@ -1,0 +1,6 @@
+projectKey=ProjetoLeilao
+serverUrl=http://localhost:9000
+serverVersion=9.1.0.47736
+dashboardUrl=http://localhost:9000/dashboard?id=ProjetoLeilao
+ceTaskId=AX0VcasIT4DF5f9v4_JC
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AX0VcasIT4DF5f9v4_JC
